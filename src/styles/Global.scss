@@ -1,3 +1,40 @@
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/Montserrat/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: Montserrat;
+  font-style: bold;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/Montserrat/Montserrat-Medium.ttf");
+}
+
+$main-color: black;
+
 body {
-  padding: 50px 300px;
+  font-family: Montserrat;
+  padding: 50px 25%;
+  color: $main-color;
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  body {
+    padding: 50px 100px;
+  }
 }

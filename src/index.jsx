@@ -6,6 +6,7 @@ import Logements from "./pages/Logements/";
 import APropos from "./pages/APropos/";
 import Header from "./components/Header";
 import Error from "./components/Error";
+import "./styles/Global.scss";
 
 ReactDOM.render(
   <React.StrictMode>

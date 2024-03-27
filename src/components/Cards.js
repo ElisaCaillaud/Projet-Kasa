@@ -1,17 +1,20 @@
 import data from "../datas/logements.json";
+import "../styles/Card.scss";
 
 function Logements() {
   return (
-    <ul>
-      {data.map((logement) => (
-        <ul>
-          <li>{logement.title}</li>
-          <li>
-            <img src={logement.cover} alt={logement.title} />
+    <div className="liste-logements">
+      <ul>
+        {data.map((logement) => (
+          <li
+            key={logement.id}
+            style={{ backgroundImage: `url(${logement.cover})` }}
+          >
+            <h3>{logement.title}</h3>
           </li>
-        </ul>
-      ))}
-    </ul>
+        ))}
+      </ul>
+    </div>
   );
 }
 

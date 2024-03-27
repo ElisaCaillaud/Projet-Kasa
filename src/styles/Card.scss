@@ -1,0 +1,47 @@
+.liste-logements {
+  color: white;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  padding: 20px;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    height: 340px;
+    width: 340px;
+    padding: 0 0 25px 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 15px;
+    position: relative;
+  }
+  li:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(10, 10, 10, 0) 42%,
+      rgba(4, 4, 4, 0.205) 99.99%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+    border-radius: 25px;
+    z-index: 9;
+  }
+  li h3 {
+    margin: 0;
+    z-index: 10;
+  }
+}

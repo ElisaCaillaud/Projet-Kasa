@@ -1,10 +1,11 @@
 import "../../styles/Banner.scss";
-import banner from "../../assets/banner-img.png";
 
 function Banner() {
   return (
-    <div>
-      <img src={banner} alt="bannière plage Kasa" className="img-banner" />
+    <div className="container-banner">
+      <div className="banner">
+        <h1>Chez vous, partout et ailleurs</h1>
+      </div>
     </div>
   );
 }

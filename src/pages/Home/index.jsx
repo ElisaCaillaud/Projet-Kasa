@@ -1,7 +1,13 @@
 import Cards from "../../components/Cards";
+import Banner from "../../components/Banner";
 
-function Card() {
-  return <Cards />;
+function Home() {
+  return (
+    <div>
+      <Banner />
+      <Cards />
+    </div>
+  );
 }
 
-export default Card;
+export default Home;
