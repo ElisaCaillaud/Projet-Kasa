@@ -1,7 +1,7 @@
-import Banner from "../../components/Banner";
+import Cards from "../../components/Cards";
 
-function App() {
-  return <Banner />;
+function Card() {
+  return <Cards />;
 }
 
-export default App;
+export default Card;
