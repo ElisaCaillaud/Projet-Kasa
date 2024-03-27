@@ -22,19 +22,37 @@
 }
 
 $main-color: black;
+$secondary-color: white;
 
 body {
   font-family: Montserrat;
+  font-weight: 400;
   padding: 50px 25%;
   color: $main-color;
   h3 {
     font-size: 18px;
     font-weight: 700;
   }
+  p {
+    font-size: 24px;
+    color: $secondary-color;
+  }
+  a {
+    text-decoration: none;
+  }
 }
 
 @media only screen and (max-width: 1440px) {
   body {
     padding: 50px 100px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    padding: 20px 10px 0 10px;
+    p {
+      font-size: 12px;
+    }
   }
 }

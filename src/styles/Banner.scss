@@ -37,3 +37,23 @@
     text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
   }
 }
+
+@media only screen and (max-width: 425px) {
+  .container-banner {
+    margin-bottom: 10px;
+    .banner {
+      height: 111px;
+      width: 100%;
+      padding: 0 20px;
+      background-position: -300px;
+      border-radius: 10px;
+    }
+    .banner:before {
+      border-radius: 10px;
+    }
+    h1 {
+      font-size: 24px;
+      text-shadow: none;
+    }
+  }
+}

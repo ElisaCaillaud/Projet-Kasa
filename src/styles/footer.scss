@@ -1,0 +1,24 @@
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 209px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .footer-wrapper {
+    display: block;
+  }
+  .img-logo-footer {
+    width: 122px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .footer {
+    .img-logo-footer {
+      width: 122px;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import data from "../datas/logements.json";
 import "../styles/Card.scss";
+import { Link } from "react-router-dom";
 
 function Logements() {
   return (
@@ -10,7 +11,9 @@ function Logements() {
             key={logement.id}
             style={{ backgroundImage: `url(${logement.cover})` }}
           >
-            <h3>{logement.title}</h3>
+            <Link to={`${logement.id}`}>
+              <h3>{logement.title}</h3>
+            </Link>
           </li>
         ))}
       </ul>
