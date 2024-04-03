@@ -33,13 +33,28 @@
   }
 }
 
-.contenuDerouleur {
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.openDerouleur {
+  opacity: 0;
+  animation: slideInFromTop 0.3s ease-in forwards;
+  padding: 15px 20px;
   background-color: #fbfbfb;
+  z-index: 10000000;
+  position: relative;
   p {
     margin-top: 0;
     color: black;
     font-size: 18px;
     font-weight: 400;
-    padding: 15px 20px;
   }
 }

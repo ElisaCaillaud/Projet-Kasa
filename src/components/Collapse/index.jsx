@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useEffect } from "react";
 import fleche from "../../assets/fleche.png";
 import "../../styles/collapse.scss";
 import { aboutList } from "../../datas/aboutList";
@@ -10,9 +9,6 @@ function CollapseAbout({ title, content }) {
   const ouvrirComposant = () => {
     setIsOpen(!isOpen);
   };
-  useEffect(() => {
-    setIsOpen((isOpen) => isOpen || false);
-  }, []);
 
   return (
     <li>
@@ -25,11 +21,9 @@ function CollapseAbout({ title, content }) {
           className={isOpen ? "rotateBottom" : "rotateTop"}
         />
       </div>
-      {isOpen && (
-        <div className="contenuDerouleur">
-          <p>{content}</p>
-        </div>
-      )}
+      <div className={isOpen ? "openDerouleur" : "closedDerouleur"}>
+        {isOpen && <p>{content}</p>}
+      </div>
     </li>
   );
 }
