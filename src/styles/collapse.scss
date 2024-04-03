@@ -1,0 +1,45 @@
+.derouleur {
+  background-color: #ff6060;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  border-radius: 5px;
+  padding: 0 20px;
+  img {
+    cursor: pointer;
+  }
+}
+
+.rotateBottom {
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
+}
+
+.rotateTop {
+  transition: transform 0.3s ease;
+}
+
+.container-liste {
+  display: flex;
+  justify-content: center;
+  ul {
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    li {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.contenuDerouleur {
+  background-color: #fbfbfb;
+  p {
+    margin-top: 0;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 15px 20px;
+  }
+}

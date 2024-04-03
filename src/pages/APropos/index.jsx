@@ -1,7 +1,11 @@
+import BannerPropos from "../../components/BannerPropos";
+import Collapse from "../../components/Collapse";
+
 function APropos() {
   return (
     <div>
-      <h1> A propos 🏠</h1>
+      <BannerPropos />
+      <Collapse />
     </div>
   );
 }

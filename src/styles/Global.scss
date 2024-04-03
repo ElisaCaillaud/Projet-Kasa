@@ -16,7 +16,7 @@
 @font-face {
   font-family: Montserrat;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-display: swap;
   src: url("../assets/fonts/Montserrat/Montserrat-Medium.ttf");
 }
@@ -29,6 +29,10 @@ body {
   font-weight: 400;
   padding: 50px 25%;
   color: $main-color;
+  h2 {
+    color: $secondary-color;
+    font-size: 24px;
+  }
   h3 {
     font-size: 18px;
     font-weight: 700;
