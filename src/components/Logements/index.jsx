@@ -14,12 +14,16 @@ function LogementsDetails() {
         <div className="name-location">
           <h1>{logement.title}</h1>
           <h3>{logement.location}</h3>
-        </div>
-        <div className="tags">
-          <p>{logement.tags}</p>
+          <div className="tags-list">
+            {logement.tags.map((tag, index) => (
+              <span key={index} className="tag">
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
         <div className="host">
-          <p>{logement.host.name}</p>
+          <p className="host-name">{logement.host.name}</p>
           <img src={logement.host.picture} />
         </div>
       </div>

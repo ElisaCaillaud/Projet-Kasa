@@ -1,3 +1,66 @@
-p {
-  color: black !important;
+$main-color: black;
+$secondary-color: white;
+$third-color: #ff6060;
+
+.info-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  .name-location {
+    h1 {
+      font-size: 36px;
+      font-weight: 500;
+      color: $third-color;
+      margin: 0;
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0 0 20px 0;
+    }
+    .tags-list {
+      margin: 0 0 20px 0;
+      display: flex;
+      gap: 10px;
+      .tag {
+        color: $secondary-color !important;
+        background-color: $third-color;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 5px 30px;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  p {
+    color: $main-color !important;
+  }
+  .host {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    .host-name {
+      color: $third-color !important;
+      font-size: 18px;
+      font-weight: 500;
+      width: 50%;
+      text-align: right;
+    }
+    img {
+      width: 64px;
+      height: 64px;
+      border-radius: 100px;
+    }
+  }
+}
+
+.container-liste-logement {
+  display: flex;
+  justify-content: space-between;
+  li {
+    list-style: none;
+    width: 45%;
+  }
 }
