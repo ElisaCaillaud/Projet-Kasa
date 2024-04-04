@@ -6,6 +6,8 @@
   height: 52px;
   border-radius: 5px;
   padding: 0 20px;
+  z-index: 10000000;
+  position: relative;
   img {
     cursor: pointer;
   }
@@ -29,7 +31,14 @@
     width: 80%;
     li {
       margin-bottom: 30px;
+      list-style: none;
     }
+  }
+}
+
+@media (max-width: 425px) {
+  ul {
+    width: 100% !important;
   }
 }
 
@@ -44,13 +53,22 @@
   }
 }
 
+/*@keyframes slideOutToTop {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+}*/
+
 .openDerouleur {
   opacity: 0;
   animation: slideInFromTop 0.3s ease-in forwards;
   padding: 15px 20px;
   background-color: #fbfbfb;
-  z-index: 10000000;
-  position: relative;
   p {
     margin-top: 0;
     color: black;
@@ -58,3 +76,7 @@
     font-weight: 400;
   }
 }
+
+/*.closedDerouleur {
+  animation: slideOutToTop 0.3s ease-in forwards;
+}*/

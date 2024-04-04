@@ -2,13 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/";
-import Logements from "./pages/Logements/";
 import APropos from "./pages/APropos/";
 import Header from "./components/Header";
-import Error from "./components/Error";
+import PageErreur from "./pages/Erreur";
 import Footer from "./components/Footer";
 import "./styles/Global.scss";
-import LogementDetail from "./pages/Logements";
+import Logements from "./pages/Logements";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,10 +15,9 @@ ReactDOM.render(
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/logements" element={<Logements />} />
         <Route path="/a-propos" element={<APropos />} />
-        <Route path="*" element={<Error />} />
-        <Route path=":id" element={<LogementDetail />} />
+        <Route path="*" element={<PageErreur />} />
+        <Route path=":id" element={<Logements />} />
       </Routes>
       <Footer />
     </Router>

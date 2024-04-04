@@ -1,9 +1,5 @@
 function Error() {
-  return (
-    <div>
-      <h1>Oups 🙈 Cette page n'existe pas</h1>
-    </div>
-  );
+  return <h1>Oups 🙈 Cette page n'existe pas</h1>;
 }
 
 export default Error;

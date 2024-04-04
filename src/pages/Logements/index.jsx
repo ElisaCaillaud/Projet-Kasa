@@ -1,9 +1,13 @@
-function Home() {
+import Slideshow from "../../components/Slideshow";
+import LogementsDetails from "../../components/Logements";
+
+function Logements() {
   return (
     <div>
-      <h1> Page d'accueil 🏠</h1>
+      <Slideshow />;
+      <LogementsDetails />;
     </div>
   );
 }
 
-export default Home;
+export default Logements;
