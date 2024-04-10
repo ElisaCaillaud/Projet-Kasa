@@ -40,6 +40,15 @@
   ul {
     width: 100% !important;
   }
+  .derouleur {
+    height: 40px;
+    h2 {
+      font-size: 15px;
+    }
+    img {
+      width: 16px;
+    }
+  }
 }
 
 @keyframes slideInFromTop {

@@ -3,6 +3,7 @@ import "../../styles/collapse.scss";
 import CollapseAbout from "../CollapseAbout";
 import { useParams } from "react-router-dom";
 import "../../styles/logement.scss";
+import Scale from "../../components/Scale";
 
 function LogementsDetails() {
   const { id } = useParams();
@@ -23,13 +24,25 @@ function LogementsDetails() {
           </div>
         </div>
         <div className="host">
-          <p className="host-name">{logement.host.name}</p>
-          <img src={logement.host.picture} />
+          <div className="host-item">
+            <p className="host-name">{logement.host.name}</p>
+            <img src={logement.host.picture} className="img-host" />
+          </div>
+          <Scale className="scale" />
         </div>
       </div>
       <div className="container-liste-logement">
         <CollapseAbout title="Description" content={logement.description} />
-        <CollapseAbout title="Équipements" content={logement.equipments} />
+        <CollapseAbout
+          title="Équipements"
+          content={
+            <ul>
+              {logement.equipments.map((equipment, index) => (
+                <li key={index}>{equipment}</li>
+              ))}
+            </ul>
+          }
+        />
       </div>
     </div>
   );

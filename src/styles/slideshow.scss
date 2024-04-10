@@ -16,3 +16,12 @@
     right: 50%;
   }
 }
+
+@media only screen and (max-width: 425px) {
+  .slider {
+    height: 255px;
+  }
+  img {
+    width: 20px;
+  }
+}

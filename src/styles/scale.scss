@@ -1,0 +1,14 @@
+.star-container {
+  margin-top: 10px;
+  img {
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .star-container {
+    img {
+      width: 18px;
+    }
+  }
+}

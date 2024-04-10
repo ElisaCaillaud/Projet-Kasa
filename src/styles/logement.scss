@@ -6,6 +6,7 @@ $third-color: #ff6060;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  margin-top: 30px;
   .name-location {
     h1 {
       font-size: 36px;
@@ -36,22 +37,26 @@ $third-color: #ff6060;
   p {
     color: $main-color !important;
   }
+
   .host {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: flex-end;
-    .host-name {
-      color: $third-color !important;
-      font-size: 18px;
-      font-weight: 500;
-      width: 50%;
-      text-align: right;
-    }
-    img {
-      width: 64px;
-      height: 64px;
-      border-radius: 100px;
+    text-align: right;
+    .host-item {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-end;
+      .host-name {
+        color: $third-color !important;
+        font-size: 18px;
+        font-weight: 500;
+        width: 50%;
+        text-align: right;
+      }
+      .img-host {
+        width: 64px;
+        height: 64px;
+        border-radius: 100px;
+      }
     }
   }
 }
@@ -59,8 +64,52 @@ $third-color: #ff6060;
 .container-liste-logement {
   display: flex;
   justify-content: space-between;
+
+  margin-bottom: 30px;
   li {
     list-style: none;
     width: 45%;
+  }
+  ul {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .name-location {
+    h1 {
+      font-size: 22px !important;
+    }
+    h3 {
+      font-size: 12px !important;
+      margin-bottom: 10px !important;
+    }
+  }
+  .info-container {
+    display: block;
+  }
+  .host {
+    display: flex;
+    text-align: right;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    .host-name {
+      font-size: 15px !important;
+    }
+  }
+  .tags-list {
+    margin-bottom: 10px !important;
+    .tag {
+      font-size: 10px !important;
+    }
+  }
+
+  .container-liste-logement {
+    display: block;
+    li {
+      width: 100%;
+      padding-top: 20px;
+    }
   }
 }
