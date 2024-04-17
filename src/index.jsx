@@ -6,7 +6,7 @@ import APropos from "./pages/APropos/";
 import Header from "./components/Header";
 import PageErreur from "./pages/Erreur";
 import Footer from "./components/Footer";
-import "./styles/Global.scss";
+import "./styles/global.scss";
 import Logements from "./pages/Logements";
 
 ReactDOM.render(
@@ -16,8 +16,8 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/a-propos" element={<APropos />} />
-        <Route path=":id" element={<Logements />} />
         <Route path="*" element={<PageErreur />} />
+        <Route path=":id" element={<Logements />} />
       </Routes>
       <Footer />
     </Router>

@@ -1,8 +1,8 @@
-import data from "../datas/logements.json";
-import "../styles/Card.scss";
+import data from "../../datas/logements.json";
+import "../../styles/card.scss";
 import { Link } from "react-router-dom";
 
-function Logements() {
+function Cards() {
   return (
     <div className="liste-logements">
       <ul>
@@ -21,4 +21,4 @@ function Logements() {
   );
 }
 
-export default Logements;
+export default Cards;
