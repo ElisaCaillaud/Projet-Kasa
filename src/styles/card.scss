@@ -60,3 +60,10 @@ $colorWhite: white;
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .liste-logements li {
+    height: 330px !important;
+    width: 330px !important;
+  }
+}

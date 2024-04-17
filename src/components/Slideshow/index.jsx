@@ -8,14 +8,14 @@ import "../../styles/slideshow.scss";
 function Slideshow() {
   const { id } = useParams();
   var photos = [];
-  var description = "";
+
   const loge = data.find((item) => item.id === id);
+
   if (loge) {
     photos = loge.pictures;
-    description = loge.description;
   }
-  const [currentIndex, setCurrentIndex] = useState(0);
 
+  const [currentIndex, setCurrentIndex] = useState(0);
   const goToNextSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === photos.length - 1 ? 0 : prevIndex + 1
@@ -33,11 +33,23 @@ function Slideshow() {
       className="slider"
       style={{ backgroundImage: `url(${photos[currentIndex]})` }}
     >
-      <img src={flecheGauche} onClick={goToPrevSlide} />
-      <p>
-        {currentIndex + 1}/{photos.length}
-      </p>
-      <img src={flecheDroite} onClick={goToNextSlide} />
+      {photos.length > 1 && (
+        <>
+          <img
+            src={flecheGauche}
+            onClick={goToPrevSlide}
+            alt="fleche direction gauche"
+          />
+          <p>
+            {currentIndex + 1}/{photos.length}
+          </p>
+          <img
+            src={flecheDroite}
+            onClick={goToNextSlide}
+            alt="fleche direction droite"
+          />
+        </>
+      )}
     </div>
   );
 }

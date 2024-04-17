@@ -1,0 +1,45 @@
+$main-color: black;
+$secondary-color: #ff6060;
+
+.error-page {
+  text-align: center;
+  margin-bottom: 100px;
+  p {
+    font-size: 288px;
+    color: $secondary-color;
+    font-weight: 900;
+    margin: 0;
+    margin-bottom: 100px;
+  }
+  h1 {
+    color: $secondary-color;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 100px;
+  }
+  a {
+    text-decoration: underline;
+    color: $main-color;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .error-page {
+    margin-bottom: 70px;
+    p {
+      font-size: 96px;
+      margin: 0;
+      margin-bottom: 70px;
+    }
+    h1 {
+      color: $secondary-color;
+      font-size: 18px;
+      margin-bottom: 70px;
+    }
+    a {
+      font-size: 14px;
+    }
+  }
+}

@@ -15,9 +15,9 @@ function Scale() {
       {stars.map((star, index) => (
         <span key={index}>
           {star <= rating ? (
-            <img src={etoileRouge} />
+            <img src={etoileRouge} alt="etoile rouge" />
           ) : (
-            <img src={etoileGrise} />
+            <img src={etoileGrise} alt="etoile grise" />
           )}
         </span>
       ))}

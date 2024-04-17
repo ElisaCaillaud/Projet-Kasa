@@ -4,10 +4,15 @@ import CollapseAbout from "../CollapseAbout";
 import { useParams } from "react-router-dom";
 import "../../styles/logement.scss";
 import Scale from "../../components/Scale";
+import { Navigate } from "react-router-dom";
 
 function LogementsDetails() {
   const { id } = useParams();
   const logement = data.find((item) => item.id === id);
+
+  if (id == null || logement == null) {
+    return <Navigate to="*" />;
+  }
 
   return (
     <div>
@@ -26,7 +31,11 @@ function LogementsDetails() {
         <div className="host">
           <div className="host-item">
             <p className="host-name">{logement.host.name}</p>
-            <img src={logement.host.picture} className="img-host" />
+            <img
+              src={logement.host.picture}
+              className="img-host"
+              alt={logement.host.name}
+            />
           </div>
           <Scale className="scale" />
         </div>

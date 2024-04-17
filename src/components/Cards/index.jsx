@@ -11,7 +11,7 @@ function Cards() {
             key={logement.id}
             style={{ backgroundImage: `url(${logement.cover})` }}
           >
-            <Link to={`${logement.id}`}>
+            <Link to={`logement/${logement.id}`}>
               <h3>{logement.title}</h3>
             </Link>
           </li>

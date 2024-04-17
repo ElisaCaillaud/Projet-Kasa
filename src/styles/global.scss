@@ -29,6 +29,11 @@ body {
   font-weight: 400;
   padding: 50px 25%;
   color: $main-color;
+  margin-bottom: 0px;
+  padding-bottom: 0px !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   h2 {
     color: $secondary-color;
     font-size: 24px;
